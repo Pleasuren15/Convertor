@@ -1,0 +1,27 @@
+﻿@model Conversion
+
+<div class="row">
+    <div class="form-group col-md-6">
+        <label class="col-form-label" asp-for="@Model.ConversionFrom"></label>
+        <input class="form-control" asp-for="@Model.ConversionFrom" />
+    </div>
+
+    <div class="form-group col-md-6">
+        <label class="col-form-label" asp-for="@Model.ConversionTo"></label>
+        <input class="form-control" asp-for="@Model.ConversionTo" />
+    </div>
+</div>
+
+<div class="row">
+    <div class="form-group col-md-6">
+        <label class="col-form-label" asp-for="@Model.ConversionFormula"></label>
+        <input class="form-control" asp-for="@Model.ConversionFormula" />
+    </div>
+
+    <div class="form-group col-md-6">
+        <label class="col-form-label" asp-for="@Model.CategoryId"></label>
+        <select class="custom-select" asp-for="@Model.CategoryId" asp-items="@ViewBag.Categories">
+            <option value=""> --Select option-- </option>
+        </select>
+    </div>
+</div>

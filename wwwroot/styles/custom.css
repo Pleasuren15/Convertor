@@ -1,0 +1,75 @@
+﻿@import url('https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Anton&family=Oswald&display=swap');
+
+*{
+    margin :0;
+    padding:0;
+}
+
+
+body {
+    font-family: 'Oswald', sans-serif;
+    background-color : aliceblue;
+}
+
+.navbar-brand{
+    font-family: 'Anton', sans-serif;
+    color: rgb(0,0,0);
+    font-size: 30px;
+}
+
+.navbar-brand:hover{
+    font-family: 'Anton', sans-serif;
+    color: rgb(0,0,0);
+    font-size: 30px;
+}
+
+.conversion-name a {
+    color: rgb(255, 255, 255);
+}
+
+.conversion-formula{
+    margin-top:0;
+    color : rgb(0, 0, 0);
+}
+
+.btn{
+    width : 110px;
+}
+
+fieldset {
+    margin-top: 10px;
+    border-left: 1px solid rgb(208, 208, 208);
+    border-bottom: 1px solid rgb(208, 208, 208);
+    box-sizing: border-box;
+    grid-area: 1 / 1; /* first row, first column */
+    padding: 15px;
+    border-radius: 3px;
+    width: inherit;
+    box-shadow: -8px 8px 9px grey;
+}
+
+legend {
+    font: 15pt 'Dela Gothic One', cursive;
+    margin: auto; /* to center */
+    padding: 0 4px;
+}
+
+.linka {
+    color: #212529;
+    background-color: #ffc107;
+    border-color: #ffc107;
+}
+
+.linka:hover {
+    color: #fff;
+    background-color: #dc3545;
+    border-color: #dc3545;
+}
+
+.delete-property-name{
+    font-weight:bold;
+}
+
+.request-link{
+    font-size : 20px;
+}

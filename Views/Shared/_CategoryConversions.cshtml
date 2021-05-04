@@ -1,0 +1,20 @@
+﻿@model Category
+
+<ol class="breadcrumb mt-2">
+    <li class="breadcrumb-item"><a asp-controller="Home" asp-action="Index">Home</a></li>
+    <li class="breadcrumb-item">@Model.CategoryName</li>
+</ol>
+
+
+
+<div class="row">
+    <div class="col-3">
+        @foreach (var c in Model.Conversions.OrderBy(s => s.ConversionName))
+        {
+                <div class="card bg-info mt-1 text-center">
+                    <p class="conversion-name"><a asp-controller="Conversion" asp-action="Convert" asp-route-conversionId="@c.ConversionId">@c.ConversionName</a></p>
+                    <p class="conversion-formula"><span class="badge badge-warning">formula</span>  @c.ConversionFormula</p>
+                </div>
+        }
+    </div>
+</div>

@@ -1,0 +1,66 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Convertor - @ViewBag.Title</title>
+    <link rel="stylesheet" asp-href-include="/lib/bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" asp-href-include="/styles/custom.css" />
+
+</head>
+<body>
+    <div class="container-fluid bg-info sticky-top">
+        <div class="container">
+            <div class="navbar navbar-expand-md justify-content-between">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link text-light" asp-controller="Home" asp-action="Index">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-light" asp-controller="Request" asp-action="Index">Requests</a>
+                    </li>            
+                    <li class="nav-item">
+                        <a class="nav-link text-light" asp-controller="Home" asp-action="AboutUs">About Us</a>
+                    </li>
+                </ul>
+
+                <div class="justify-content-end">
+                    <ul class="navbar-nav ">
+                        <li class="nav-item">
+                            <a href="#MySearchBar" data-toggle="collapse" class="nav-link text-light"><img src="~/images/icons8-search-35.png" width="25" height="25" /></a>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+            <div class="row">
+                <div class="col-md-12 col-6 collapse" id="MySearchBar">
+                    <form method="get" asp-controller="Conversion" asp-action="Search" asp-route-searchBy="@ViewData["SearchBy"]">
+                        <p>
+                            <input type="text" name="searchBy" class="form-control" placeholder="Search Conversion"
+                                   value="@ViewData["SearchBy"]" />
+                        </p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    @RenderBody()
+
+    <div class="container mt-3">
+        <hr />
+        <div class="row">
+            <p class="col-md-8">&copy;2021, Copyright</p>
+            <p class="col-md-4">
+                Site created by Pleasure Ndhlovu
+                <img src="~/images/icons8-facebook-35.png" />
+                <img src="~/images/icons8-instagram-35.png" />
+                <img src="~/images/icons8-pinterest-35.png" />
+            </p>
+        </div>
+    </div>
+
+    <script asp-src-include="/lib/jquery/jquery.slim.min.js"></script>
+    <script asp-src-include="/lib/popper.js/popper.min.js"></script>
+    <script asp-src-include="/lib/bootstrap/js/bootstrap.min.js"></script>
+</body>
+</html>

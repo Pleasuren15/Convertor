@@ -1,0 +1,62 @@
+﻿@{
+    ViewData["Title"] = "About Us";
+}
+
+<div class="container">
+    @*<h2 class="text-md-center">About Us</h2>
+        <hr class="bg-warning w-50 mx-md-auto" />*@
+
+    <div class="row">
+        <div class="col-md-8">
+            <h3>Founder</h3>
+            <div class="media">
+                <img src="~/images/Avatar.png" class="rounded-circle d-block mx-auto" width="150" height="150" />
+                <div class="media-body ml-2">
+                    <p>
+                        <a asp-controller="Home" asp-action="Index">www.convertor.com</a> was solely developed by <strong>Pleasure Ndhlovu</strong> to practise,revamp,enhance &amp; enrich his skills &amp; knowledge when it comes to Internet Programming</. He is an ambitious lad who enjoys programming &amp; willing to learn more in the software engineering department
+                    </p>
+                    <p>
+                        He's currently doing his studies at the University Of The Free State, started 2018, Feb &amp; expected to finish 2021, Nov. Where he studies<>
+                        Bachelor of Science in Information Technology majoring in Computer Science and Business Management, To check out some his project visit his <a href="https://github.com/Pleasuren15" target="_blank">Githbub</a> profile
+                    </p>
+                    <p>
+                        •Self-motivated •Integrity •Respect •Self-awereness •Honest •Adventurous •Hard-working •Willing to learn •Likes challanges •Loves team work
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div>
+        <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#ContactUsModal">Contact Us</button>
+        <div class="modal fade" id="ContactUsModal">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h3 class="modal-title">Contact Us</h3>
+                        <button class="close" data-dismiss="modal">&times;</button>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <div class="form-group">
+                                <label>Name<span class="text-danger">*</span></label>
+                                <input class="form-control" />
+                            </div>
+                            <div class="form-group">
+                                <label>Email<span class="text-danger">*</span></label>
+                                <input class="form-control" />
+                            </div>
+                            <div class="form-group">
+                                <label>Message<span class="text-danger">*</span></label>
+                                <textarea cols="7" class="form-control"></textarea>
+                            </div>
+                            <div class="form-group">
+                                <button class="btn btn-success" data-dismiss="modal">Confirm</button>
+                                <button class="btn btn-danger" data-dismiss="modal">Close</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

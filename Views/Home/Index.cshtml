@@ -1,0 +1,23 @@
+﻿@model IEnumerable<Category>
+
+@{
+    ViewData["Title"] = "Home";
+}
+
+<div class="container">
+    <div class="row text-center">
+        @foreach (var c in Model)
+        {
+            <div class="col-md-4 mt-2">
+                <fieldset class="">
+                    <legend>@c.CategoryName</legend>
+                    <img class="mx-auto d-block" src="@c.CategoryUrl" />
+                    <p class="text-center small">@c.CategoryDescription</p>
+                    <p class="text-center">
+                        <a class="btn linka w-50" asp-controller="Conversion" asp-action="@c.CategoryName">Go to...</a>
+                    </p>
+                </fieldset>
+            </div>
+        }
+    </div>
+</div>

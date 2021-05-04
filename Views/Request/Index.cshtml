@@ -1,0 +1,64 @@
+﻿@model ConversionsViewModel
+
+@{
+    ViewData["Title"] = "Request";
+}
+
+    <div class="container">
+        <ol class="breadcrumb mt-2">
+            <li class="breadcrumb-item"><a asp-controller="Home" asp-action="Index">Home</a></li>
+            <li class="breadcrumb-item">Requests</li>
+        </ol>
+        @if (ViewData["Message"] != null)
+        {
+            <div role="alert" class="alert alert-info alert-dismissible">
+                <button role="button" data-dismiss="alert" class="close">
+                    <span>&times;</span>
+                </button>
+                @ViewData["Message"]
+            </div>
+        }
+        <table class="table">
+            <thead class="thead-dark">
+                <tr>
+                    <th scope="col">
+                        <a class="text-light" asp-controller="Request" asp-action="Index" asp-route-sortBy="@ViewData["KeySortParams"]"
+                           asp-route-pageNumber="@ViewData["PageNumber"]">Key</a>
+                    </th>
+                    <th scope="col">
+                        <a class="text-light" asp-controller="Request" asp-action="Index" asp-route-sortBy="@ViewData["NameSortParams"]"
+                           asp-route-pageNumber="@ViewData["PageNumber"]">Description</a>
+                    </th>
+                    <th scope="col">
+                        <a class="text-light" asp-controller="Request" asp-action="Index" asp-route-sortBy="@ViewData["FromSortParams"]"
+                           asp-route-pageNumber="@ViewData["PageNumber"]">From</a>
+                    </th>
+                    <th scope="col">
+                        <a class="text-light" asp-controller="Request" asp-action="Index" asp-route-sortBy="@ViewData["ToSortParams"]"
+                           asp-route-pageNumber="@ViewData["PageNumber"]">To</a>
+                    </th>
+                    <th scope="col">Formula</th>
+                    <th scope="col">
+                        <a class="text-success" asp-controller="Request" asp-action="Add">Add New Request</a>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var c in Model.conversions)
+                {
+                    <tr>
+                        <td>@c.ConversionId</td>
+                        <td>@c.ConversionName</td>
+                        <td>@c.ConversionFrom</td>
+                        <td>@c.ConversionTo</td>
+                        <td>@c.ConversionFormula</td>
+                        <td>
+                            <a asp-controller="Request" asp-action="Edit" asp-route-Id="@c.ConversionId" class="text-success">Edit</a>
+                            |   <a asp-controller="Request" asp-action="Delete" asp-route-Id="@c.ConversionId" class="text-danger">Delete</a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+        <div class="my-auto text-center request-link" page-model="@Model.pagingInfo"></div>
+    </div>

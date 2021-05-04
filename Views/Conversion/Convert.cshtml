@@ -1,0 +1,39 @@
+﻿@model Conversion
+
+@{
+    ViewData["Title"] = "Convert";
+}
+
+<div class="container">
+    <ol class="breadcrumb mt-2">
+        <li class="breadcrumb-item"><a asp-controller="Home" asp-action="Index">Home</a></li>
+        <li class="breadcrumb-item"><a asp-controller="Conversion" asp-action="@Model.Category.CategoryName">@Model.Category.CategoryName
+             </a></li>
+        <li class="breadcrumb-item">@Model.ConversionName</li>
+    </ol>
+
+    <div>
+        <form method="post" asp-controller="Conversion" asp-action="Calculate">
+            <div asp-validation-summary="All"></div>
+
+            <input type="hidden" asp-for="@Model.ConversionId" />
+
+            <div class="row form-group">
+                <div class="col-6">
+                    <label asp-for="@Model.ConversionFromValue" class="col-form-label">@Model.ConversionFrom</label>
+                    <input asp-for="@Model.ConversionFromValue" class="form-control"  placeholder="@Model.ConversionFrom" />
+                </div>
+                <div class="col-6">
+                    <label asp-for="@Model.ConversionToValue" class="col-form-label">@Model.ConversionTo</label>
+                    <input asp-for="@Model.ConversionToValue"  class="form-control" placeholder="@Model.ConversionTo" />
+                </div>
+            </div>
+            <p class="conversion-formula"><span class="badge badge-warning">formula </span>@Model.ConversionFormula</p>
+            <p>
+                <button class="btn btn-info" role="button" type="submit">Convert</button>
+                <a class="btn btn-info ml-1" role="button" asp-controller="Conversion" asp-action="Swap" asp-route-conversionId="@Model.ConversionId">Swap</a>
+                <button class="btn btn-danger ml-1" role="button" type="reset">Reset</button>
+            </p>
+        </form>
+    </div>
+</div>

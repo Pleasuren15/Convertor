@@ -1,0 +1,46 @@
+﻿@model Conversion
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<div class="container">
+    <ol class="breadcrumb mt-2">
+        <li class="breadcrumb-item"><a asp-controller="Home" asp-action="Index">Home</a></li>
+        <li class="breadcrumb-item"><a asp-controller="Request" asp-action="Index">Requests</a></li>
+        <li class="breadcrumb-item">Delete Request</li>
+    </ol>
+
+    <p class="text-danger">@ViewData["ErrorMessage"]</p>
+
+    <div class="row">
+        <div class="col-md-6">
+            <h5 class="delete-property-name">Conversion Id</h5>
+            <p class="text-secondary">@Model.ConversionId</p>
+        </div>
+        <div class="col-md-6">
+            <h5 class="delete-property-name">Conversion Name</h5>
+            <p class="text-secondary">@Model.ConversionName</p>
+        </div>
+        <div class="col-md-6">
+            <h5 class="delete-property-name">From</h5>
+            <p class="text-secondary">@Model.ConversionFrom</p>
+        </div>
+        <div class="col-md-6">
+            <h5 class="delete-property-name">To</h5>
+            <p class="text-secondary">@Model.ConversionTo</p>
+        </div>
+        <div class="col-md-6">
+            <h5 class="delete-property-name">Formula</h5>
+            <p class="text-secondary">@Model.ConversionFormula</p>
+        </div>
+    </div>
+    <form method="post" asp-controller="Request" asp-action="Delete">
+        <input type="hidden" asp-for="@Model.ConversionId" />
+        <p>
+            <button type="submit" class="btn btn-danger" onclick="return confirm('Are you sure you want to delete?')">
+                Delete
+            </button>
+        </p>
+    </form>
+</div>
