@@ -8604,11 +8604,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\My_Stuff\\Academics\\Projects\\VERY IMPORTANT\\Convertor-main\\Convertor-main\\Convertor.csproj",
+      "projectUniqueName": "C:\\My_Stuff\\Academics\\Projects\\VERY IMPORTANT\\Convertor\\Convertor.csproj",
       "projectName": "Convertor",
-      "projectPath": "C:\\My_Stuff\\Academics\\Projects\\VERY IMPORTANT\\Convertor-main\\Convertor-main\\Convertor.csproj",
+      "projectPath": "C:\\My_Stuff\\Academics\\Projects\\VERY IMPORTANT\\Convertor\\Convertor.csproj",
       "packagesPath": "C:\\Users\\2017269214\\.nuget\\packages\\",
-      "outputPath": "C:\\My_Stuff\\Academics\\Projects\\VERY IMPORTANT\\Convertor-main\\Convertor-main\\obj\\",
+      "outputPath": "C:\\My_Stuff\\Academics\\Projects\\VERY IMPORTANT\\Convertor\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "\\\\mcsfs01\\users$\\2017269214\\AppData\\Roaming\\NuGet\\NuGet.Config",

@@ -1,9 +1,16 @@
 ﻿@model Category
 
 @{
-    ViewData["Title"] = "Speed";
+    ViewData["Title"] = Model.CategoryName;
 }
 
-    <div class="container">
-        <partial name="_CategoryConversions" model="@Model" />
+<div class="container">
+    <div class="row">
+        <div class="col-md-4">
+            <partial name="_CategoryConversions" model="@Model" />
+        </div>
+        <div class="col-md-8">
+            <h2 class="mt-2">@Model.CategoryName content here</h2>
+        </div>
     </div>
+</div>
